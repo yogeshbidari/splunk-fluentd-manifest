@@ -41,7 +41,7 @@ data:
       @type tail
       @label @SPLUNK
       tag tail.containers.*
-      path /var/log/containers/*.log
+      path "/var/log/containers/**_prd_**.log"
       pos_file /var/log/splunk-fluentd-containers.log.pos
       path_key source
       read_from_head true
@@ -60,7 +60,7 @@ data:
       @type tail
       @label @SPLUNK
       tag tail.file.*
-      path /var/log/*.log
+      path /var/log/datasiv/*.log
       pos_file /var/log/splunk-files.log.pos
       path_key source
       read_from_head true
