@@ -41,7 +41,7 @@ data:
       @type tail
       @label @SPLUNK
       tag tail.containers.*
-      path "/var/log/containers/**_prd_**.log"
+      path /var/log/containers/*.log
       pos_file /var/log/splunk-fluentd-containers.log.pos
       path_key source
       read_from_head true
@@ -239,10 +239,10 @@ data:
       <match **>
         @type splunk_hec
         protocol http
-        hec_host 35.239.82.38
+        hec_host 34.68.106.143
         hec_port 8088
-        hec_token 3c25b18b-1e62-43d1-aa33-73d3c788a223
-        host 35.239.82.38
+        hec_token 3922948e-82e6-4f1d-9521-b67686e8d6d6
+        host 34.68.106.143
         index test
         source_key source
         sourcetype_key sourcetype
